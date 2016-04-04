@@ -1,5 +1,5 @@
 # #AcaHayDengue
 
-![AcaSeDona](http://i.imgur.com/IenCMxj.png)
+![AcaSeDona](https://raw.githubusercontent.com/nfmelendez/AcaSeDona/master/logo.png)
 
 

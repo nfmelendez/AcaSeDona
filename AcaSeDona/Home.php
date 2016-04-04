@@ -56,12 +56,12 @@ class Home {
             // save new place
             Place::create(
                 array(
-                    'name'       => $post_data['name'],
+                    'name'       => "Reporte de Infección",
                     'address'    => $address,
-                    'start_hour' => $post_data['start_hour'],
-                    'end_hour'   => $post_data['end_hour'],
-                    'days'       => $post_data['days'],
-                    'comments'   => $post_data['comments'],
+                    'start_hour' => date('d-m-Y'),
+                    'end_hour'   => "",
+                    'days'       => "",
+                    'comments'   => "Esta información fue aportada anonimamente. ",
                 )
             );
 
@@ -90,7 +90,7 @@ class Home {
 
             if ( ! empty($place['start_hour']))
             {
-                $complete .= "<br><small><u>Horario:</u> ";
+                $complete .= "<br><small><u>Fecha de creación:</u> ";
                 $complete .= "{$place['start_hour']}";
                 if ( ! empty($place['end_hour']) && $place['start_hour'] != $place['end_hour'])
                     $complete .= " - {$place['end_hour']}";

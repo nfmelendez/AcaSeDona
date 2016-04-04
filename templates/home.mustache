@@ -1,30 +1,30 @@
 <div id="map"></div>
 
 <div class="floating-form">
-    <span class="text text-center">¡Completá el formulario!</span>
+    <span style="color:white;" class="text text-center">¡Reportá una infección de dengue!</span>
 
     {{#flash}}
     <div class="alert_success">
-        El centro de donación que cargaste ya se marcó en el mapa.
+        El reporte ya se marco en el mapa.
         <br>
-        ¡Muchas gracias!
+        ¡Muchas gracias por ayudar a toda la comunidad!
     </div>
     {{/flash}}
 
     <form method="post" action="send-place">
         <div class="content">
-            <div class="form-group">
+            <div style="display:none;" class="form-group">
                 <label for="name">Nombre del lugar</label>
                 <input type="text" class="form-control" name="name" id="name" placeholder="Nombre del lugar">
             </div>
             <div class="row">
                 <div class="form-group col-xs-8">
-                    <label for="address">Dirección</label>
+                    <label style="color:white;" for="address">Dirección</label>
                     <input type="text" class="form-control" name="calle" id="calle" placeholder="Calle">
                 </div>
                 <div class="form-group col-xs-4">
                     <label>&nbsp;</label>
-                    <input type="text" class="form-control" name="altura" id="altura" placeholder="Altura">
+                    <input type="text" class="form-control" name="altura" id="altura" placeholder="Altura aproximada">
                 </div>
                 <div class="form-group col-xs-6">
                     <input type="text" class="form-control" name="ciudad" id="ciudad" placeholder="Ciudad">
@@ -58,7 +58,7 @@
                     </select>
                 </div>
             </div>
-            <div class="row">
+            <div style="display:none;" class="row">
                 <div class="col-xs-12">
                     <label for="start_hour">Horario y días de atención</label>
                 </div>
@@ -72,7 +72,7 @@
                     <input type="text" class="form-control" name="days" id="days" placeholder="Días de atención">
                 </div>
             </div>
-            <div class="form-group">
+            <div style="display:none;" class="form-group">
                 <label for="contact">Comentarios</label>
                 <textarea name="comments" class="form-control" rows="5"
                           placeholder="(Tipo de donaciones, cuenta bancaria donde se reciben donaciones, persona de contacto, teléfono)"></textarea>
@@ -80,19 +80,21 @@
             <div class="form-group">
                 <div class="g-recaptcha" data-sitekey="{{ recaptcha_public }}"></div>
             </div>
-            <button type="submit" class="btn btn-warning">Agregar Centro de Donación</button>
+            <button type="submit" class="btn btn-warning">Enviar reporte</button>
         </form>
+
+         <a href="#" id="closeReport" style="color:black" class="btn btn-large">Cerrar</a>
     </div>
 </div>
 
 <div class="floating-about">
     <div class="about">
-        <b>#AcaSeDona: el sitio para ayudar a los inundados</b><br>
-        AcaSeDona.com.ar es un proyecto que surgió con el fin de unificar la información sobre centros que reciben donaciones para los inundados.<br>
-        Se trata de un mapa colaborativo en el que cualquier persona puede agregar puntos de donación de todo el país como colegios, iglesias, universidades y clubes de barrio.<br>
-        La georeferencia permite que los usuarios puedan detectar fácilmente cuáles son los lugares cercanos para poder acercarse a donar en su barrio.<br>
-        Para agregar un punto sólo hace falta ingresar a AcaSeDona.com.ar y llenar un breve formulario que incluye datos como dirección y horarios en los que se reciben las donaciones.<br>
-        Primero se charló entre @Martujohansen y @celestineia. Una vez que acordaron cómo sería el sitio, rápidamente sumaron a un diseñador (@rusosnith) y a un desarrollador (@alemohamad), y en 22 hs (exactas) tenían funcionando el sitio sin haberse reunido ni una sola vez.<br><br>
+        <b>#AcaHayDengue: el sitio que te informa donde pudieran existir focos infecciosos de dengue</b><br>
+        AcaHayDengue.com.ar es un proyecto que surgió con el fin de unificar la información sobre los casos de infección de dengue en el país.<br>
+        Se trata de un mapa colaborativo en el que cualquier persona puede reportar donde se infecto con dengue de manera anónima y de esa manera colaborar en generar un mapa del dengue en el país.<br>
+
+        Este trabajo esta basado en el proyecto open source de <a href="http://acasedona.com.ar">acasedona.com.ar</a> Se agradece a todo el equipo por hacer público su <a href="https://github.com/AcaSeDona/AcaSeDona">trabajo en github</a><br>
+        <strong>Atención: La información en el mapa puede no ser real ya que los datos que la gente carga NO son checkeados y son anonimos</strong><br><br>
         <button class="form-control btn small btn-primary show-info">Cerrar info</button>
     </div>
 
@@ -100,3 +102,6 @@
 
     {{! { flowics } }}
 </div>
+
+
+

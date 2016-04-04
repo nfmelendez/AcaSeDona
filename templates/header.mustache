@@ -13,25 +13,25 @@
                         <div class="fb-share-button" data-href="http://www.acasedona.com.ar/" data-layout="button_count"></div>
                     </td>
                     <td>
-                        <a class="github-button" href="https://github.com/AcaSeDona/AcaSeDona/fork" data-icon="octicon-git-branch" data-count-href="/AcaSeDona/AcaSeDona/network" data-count-api="/repos/AcaSeDona/AcaSeDona#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork AcaSeDona/AcaSeDona on GitHub" style="margin-left: 20px; margin-bottom: -10px;">Fork</a>
+                        <a class="github-button" href="https://github.com/nfmelendez/AcaSeDona/fork" data-icon="octicon-git-branch" data-count-href="/nfmelendez/AcaSeDona/network" data-count-api="/repos/nfmelendez/AcaSeDona#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork nfmelendez/AcaSeDona on GitHub" style="margin-left: 20px; margin-bottom: -10px;">Fork</a>
                         <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
                     </td>
                 </tr>
             </table>
         </div>
         <div class="col-md-8">
-            <p class="text hidden-xs hidden-sm">Armemos un mapa que muestre todos los lugares que reciben ayuda para los inundados.</p>
+            <p class="text hidden-xs hidden-sm">Armemos un mapa que muestre todos los lugares donde alguien se infecto con dengue</p>
             <div class="row">
-                <div class="col-xs-4 col-md-3">
-                    <button class="form-control btn btn-success current-location hidden-xs hidden-sm"><i class="fa fa-map-marker"></i> ¿Dónde estoy?</button>
+                <div class="col-xs-4 col-md-5">
+                    <button class="form-control btn-large btn-success current-location hidden-xs hidden-sm"><i class="fa fa-map-marker"></i>Ubicame automaticamente en el mapa</button>
                     <button class="form-control btn btn-success current-location hidden-md hidden-lg"><i class="fa fa-map-marker"></i></button>
                 </div>
-                <div class="col-xs-4 col-md-5">
+                <div style="display:none;" class="col-xs-4 col-md-5">
                     <input class="form-control search-places hidden-xs hidden-sm" type="search" data-provide="typeahead" autocomplete="off" placeholder="Buscar centro de donación">
                     <input class="form-control search-places hidden-md hidden-lg" type="search" data-provide="typeahead" autocomplete="off" placeholder="Buscar">
                 </div>
-                <div class="col-xs-4 col-md-4">
-                    <button class="form-control btn btn-danger show-form hidden-xs hidden-sm">Agregá un centro de donación</button>
+                <div class="col-xs-4 col-md-6">
+                    <button id="reportInfection" class="form-control btn btn-danger show-form hidden-xs hidden-sm">Ayudar reportando una infección </button>
                     <button class="form-control btn btn-danger show-form hidden-md hidden-lg">Agregar</button>
                 </div>
             </div>

@@ -27,7 +27,7 @@ class Place extends Eloquent {
 
         // generates uri slug
         $slugify = new Slugify();
-        $this->attributes['slug'] = $slugify->slugify($name);
+        $this->attributes['slug'] = $slugify->slugify($value);
 
         // TODO - generates short url of this place
         // $this->attributes['googl'] = '';

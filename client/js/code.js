@@ -51,6 +51,7 @@ function loadResults (data) {
 }
 
 $(document).ready(function () {
+
     map = new GMaps({
         div: '#map',
         lat: -34.6036844,
@@ -103,7 +104,7 @@ $(document).ready(function () {
             },
             templates: {
                 empty: [
-                    '<div class="empty-message">No se encontraron centros</div>'
+                    '<div class="empty-message">No se encontraron reportes</div>'
                 ].join('\n')
             }
         });
@@ -123,4 +124,8 @@ $(document).ready(function () {
     $('.current-location').on('click', function() {
         displayCurrentLocation(true);
     });
+    $('#closeReport').on('click', function() {
+        $('#reportInfection').click();
+    });
+
 });

@@ -5,7 +5,7 @@ header {
   background: $greenBlue;
   .container {
     h1 {
-      @include size(236px, 80px);
+      @include size(355px, 80px);
       background: url('../images/acasedona.png') no-repeat center center;
       background-size: cover;
       text-indent: -9999px;
